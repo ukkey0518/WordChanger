@@ -67,6 +67,9 @@
     <string name="cdf_set_title_delete">キーワードの削除</string>
     <string name="cdf_set_message_delete">このキーワードを削除します。</string>
 
+    <!-- OpeningDialogFragment [odf] -->
+    <string name="odf_title">ダウンロードしていただき、誠にありがとうございます！</string>
+
 
     <!-- HowToUseActivity [htua] -->
     <string name="htua_title_opening">このアプリの使い方</string>

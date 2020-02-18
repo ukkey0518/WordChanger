@@ -20,7 +20,7 @@ class OpeningDialogFragment: DialogFragment(), DialogInterface.OnClickListener {
 
         // タイトル用TextViewの生成
         val tvTitle = TextView(context)
-        tvTitle.text = "ダウンロードしていただき\n誠にありがとうございます！"
+        tvTitle.text = getString(R.string.odf_title)
         tvTitle.textSize = 24F
         tvTitle.setTextColor(Color.WHITE)
         tvTitle.setBackgroundColor(Color.rgb(192, 142, 47))
