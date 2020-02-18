@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+
+        android:id="@+id/menuHelp"
+        android:icon="@drawable/icon_menu_help"
+        android:title="ヘルプ"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/menuHowToUseOpening"
+                android:icon="@drawable/icon_help"
+                android:title="基本的な使い方"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/menuHowToUseButton"
+                android:icon="@drawable/icon_help"
+                android:title="各ボタンの説明"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/menuHowToUseNLSSet"
+                android:icon="@drawable/icon_help"
+                android:title="改行・空白の設定について"
+                app:showAsAction="ifRoom"/>
+            <item
+                android:id="@+id/menuHowToUsePriority"
+                android:icon="@drawable/icon_help"
+                android:title="優先度って何？"
+                app:showAsAction="ifRoom"/>
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".SettingActivity">
+
+
+    <!-- ツールバー -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/dp_s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="変換の設定"
+        app:titleTextColor="@color/white" />
+
+    <!-- その他の一括設定 -->
+    <LinearLayout
+        android:id="@+id/layout_spaceSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/adView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:padding="@dimen/dp_s">
+
+            <TextView
+                style="@style/titleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center_vertical"
+                android:text="@string/set_big_title_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_s"
+            android:layout_marginEnd="@dimen/dp_s"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_m"
+                android:layout_weight="0.4"
+                android:drawableStart="@drawable/icon_newline"
+                android:gravity="center"
+                android:paddingStart="@dimen/dp_m"
+                android:paddingEnd="@dimen/dp_m"
+                android:text="@string/set_newline_title"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/sp_m" />
+
+            <Spinner
+                android:id="@+id/spNewLineSetting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:background="@drawable/spinner_style"
+                android:entries="@array/set_spinner_newLine"
+                android:padding="@dimen/dp_s" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/dp_s"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvSpinnerNewlineDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_m"
+                android:layout_weight="0.4"
+                android:text=""
+                android:textSize="@dimen/sp_m" />
+
+            <EditText
+                android:id="@+id/etNewLineSetting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:background="@color/colorPrimary"
+                android:enabled="false"
+                android:inputType="text"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:padding="@dimen/dp_m"
+                android:textSize="@dimen/sp_m" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_s"
+            android:layout_marginEnd="@dimen/dp_s"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_m"
+                android:layout_weight="0.4"
+                android:drawableStart="@drawable/icon_space"
+                android:gravity="center"
+                android:paddingStart="@dimen/dp_m"
+                android:paddingEnd="@dimen/dp_m"
+                android:text="@string/set_space_title"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/sp_m" />
+
+            <Spinner
+                android:id="@+id/spSpaceSetting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:background="@drawable/spinner_style"
+                android:entries="@array/set_spinner_space"
+                android:padding="@dimen/dp_s"
+                android:textSize="@dimen/sp_m" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/dp_s"
+            android:layout_marginBottom="@dimen/dp_s"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvSpinnerSpaceDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_m"
+                android:layout_weight="0.4"
+                android:text=""
+                android:textSize="@dimen/sp_m" />
+
+            <EditText
+                android:id="@+id/etSpaceSetting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:background="#e5ab47"
+                android:enabled="false"
+                android:inputType="text"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:padding="@dimen/dp_m"
+                android:textSize="@dimen/sp_m" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintTop_toBottomOf="@id/layout_spaceSetting"
+        ads:layout_constraintBottom_toTopOf="@id/layout_changeWord">
+    </com.google.android.gms.ads.AdView>
+
+
+    <!-- 変換文字の設定 -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_changeWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:padding="@dimen/dp_s"
+        app:layout_constraintBottom_toTopOf="@id/rvWordList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/adView">
+
+        <TextView
+            android:id="@+id/tvTitle_changeWord"
+            style="@style/titleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+
+            android:gravity="center"
+            android:text="@string/set_big_title_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnReset"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="40dp"
+            android:onClick="onDeleteAllButtonClick"
+            android:src="@drawable/icon_reset"
+            android:textSize="@dimen/sp_m"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnAddList"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnAddList"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="@dimen/dp_m"
+            android:onClick="onAddListButtonClick"
+            android:src="@drawable/icon_setting_add"
+            android:textSize="@dimen/sp_m"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_list_priority"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/dp_m"
+        android:background="@drawable/list_priority_background"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/layout_SaveContents"
+        app:layout_constraintEnd_toStartOf="@id/rvWordList"
+        app:layout_constraintHorizontal_weight="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_changeWord">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:fontFamily="@font/corporatelogo"
+            android:gravity="center"
+            android:text="高"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/sp_l" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:fontFamily="@font/corporatelogo"
+            android:gravity="center"
+            android:text="優\n先\n度"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/sp_m" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:fontFamily="@font/corporatelogo"
+            android:gravity="center"
+            android:text="低"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/sp_m" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWordList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/layout_SaveContents"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="0.85"
+        app:layout_constraintStart_toEndOf="@id/layout_list_priority"
+        app:layout_constraintTop_toBottomOf="@id/layout_changeWord" />
+
+    <LinearLayout
+        android:id="@+id/layout_SaveContents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/titleStyle"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/dp_s"
+            android:layout_marginBottom="@dimen/dp_s"
+            android:onClick="onSaveButtonClick"
+            android:text="@string/set_btn_save"
+            android:textSize="@dimen/sp_m" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

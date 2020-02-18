@@ -1,0 +1,57 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/colorTextPrimary</item>
+    </style>
+
+
+    <!-- 変換文字列追加・編集ダイアログのスタイル -->
+    <style name="AddEditWordDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <!-- 横幅の指定 -->
+        <item name="android:windowMinWidthMajor">@dimen/dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@dimen/dialog_min_width_minor</item>
+        <!-- ボタンのスタイル -->
+        <item name="buttonBarNeutralButtonStyle">@style/buttonBarButtonStyle.Neutral</item>
+        <item name="buttonBarPositiveButtonStyle">@style/buttonBarButtonStyle.Positive</item>
+    </style>
+
+    <!-- ダイアログの「ボタン」のスタイル -->
+    <style name="buttonBarButtonStyle" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="buttonBarButtonStyle.Neutral">
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+
+    <style name="buttonBarButtonStyle.Positive">
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+
+
+    <style name="titleStyle">
+        <item name="android:fontFamily">@font/corporatelogo</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:textSize">@dimen/sp_l</item>
+    </style>
+
+
+    <!-- 半透明背景設定(HowToUseActivity) -->
+    <drawable name="transparameter">#af000000</drawable>
+    <style name="Theme.HowToUseBackground" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/transparameter</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+</resources>

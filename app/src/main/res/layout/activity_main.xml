@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/dp_s"
+        android:minHeight="@dimen/abc_action_bar_default_height_material"
+        app:layout_constraintBottom_toTopOf="@id/layout_Top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_Top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_m"
+        android:layout_marginTop="@dimen/dp_m"
+        android:layout_marginEnd="@dimen/dp_m"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <ImageView
+            android:id="@+id/main_iconInputTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="@dimen/dp_s"
+            android:src="@drawable/iv_main_title_input"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/main_tvInputTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/main_tvInputTitle"
+            style="@style/titleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp_s"
+            android:text="@string/main_input_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/main_btnClearInput"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/dp_m"
+            android:enabled="false"
+            android:onClick="onClearInputButtonClick"
+            android:src="@drawable/icon_reset"
+            android:textSize="@dimen/sp_m"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <EditText
+        android:id="@+id/main_etInput"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_m"
+        android:layout_marginEnd="@dimen/dp_m"
+        android:layout_marginBottom="@dimen/dp_m"
+        android:background="@color/white"
+        android:gravity="top"
+        android:hint="@string/main_input_hint"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/dp_s"
+        android:textSize="@dimen/sp_m"
+        app:layout_constraintBottom_toTopOf="@id/main_btnChange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_Top" />
+
+    <ImageView
+        android:id="@+id/main_btnSetting"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="@dimen/dp_m"
+        android:onClick="onSettingButtonClick"
+        android:src="@drawable/btn_main_setting"
+        app:layout_constraintBottom_toTopOf="@id/adView"
+        app:layout_constraintEnd_toStartOf="@id/main_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_etInput" />
+
+    <ImageView
+        android:id="@+id/main_arrow"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:src="@drawable/iv_main_arrow"
+        app:layout_constraintBottom_toTopOf="@id/adView"
+        app:layout_constraintEnd_toStartOf="@id/main_btnChange"
+        app:layout_constraintStart_toEndOf="@id/main_btnSetting"
+        app:layout_constraintTop_toBottomOf="@id/main_etInput" />
+
+    <ImageView
+        android:id="@+id/main_btnChange"
+        android:layout_width="175dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="@dimen/dp_m"
+        android:onClick="onChangeButtonClick"
+        android:src="@drawable/btn_main_change"
+        app:layout_constraintBottom_toTopOf="@id/adView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/main_arrow"
+        app:layout_constraintTop_toBottomOf="@id/main_etInput" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_m"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        ads:layout_constraintBottom_toTopOf="@id/layout_Bottom"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="@id/main_btnChange" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_Bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_m"
+        android:layout_marginTop="@dimen/dp_m"
+        android:layout_marginEnd="@dimen/dp_m"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_s"
+        app:layout_constraintBottom_toTopOf="@id/main_etOutput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/adView">
+
+        <ImageView
+            android:id="@+id/main_iconOutputTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="@dimen/dp_s"
+            android:src="@drawable/iv_main_title_output"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/main_tvOutputTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/main_tvOutputTitle"
+            style="@style/titleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp_s"
+            android:text="@string/main_output_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="@dimen/dp_m"
+            android:onClick="onCopyClipBordButtonClick"
+            android:src="@drawable/icon_copy"
+            android:textSize="@dimen/sp_m"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <EditText
+        android:id="@+id/main_etOutput"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_m"
+        android:layout_marginEnd="@dimen/dp_m"
+        android:layout_marginBottom="@dimen/dp_m"
+        android:background="@color/gray"
+        android:enabled="false"
+        android:gravity="top"
+        android:hint="@string/main_output_hint"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/dp_s"
+        android:textSize="@dimen/sp_m"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_Bottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

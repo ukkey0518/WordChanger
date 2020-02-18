@@ -1,0 +1,89 @@
+<resources>
+
+    <!-- Application [app]-->
+    <string name="app_name">WordChanger - 文字列変換</string>
+
+
+    <!-- MainActivity [main] -->
+    <string name="main_input_hint">変換したいテキスト</string>
+    <string name="main_output_hint">変換後の文字列</string>
+    <string name="main_input_title">テキスト入力</string>
+    <string name="main_output_title">テキスト出力</string>
+
+
+    <!-- SettingActivity [set] -->
+    <string name="set_big_title_1">改行・空白の一括設定</string>
+    <string name="set_big_title_2">変換文字列の設定</string>
+    <string name="set_newline_title">改行の設定</string>
+    <string name="set_space_title">空白の設定</string>
+    <string name="set_nothing_list_desc">登録された文字列がありません。\n右上の＋ボタンから、変換文字列の追加ができます。</string>
+    <string name="set_btn_save">適用して閉じる</string>
+    <string name="set_et_hint_spinner">ここに入力</string>
+    <string-array name="set_spinner_newLine">
+        <item>設定しない</item>
+        <item>指定の文字に変換</item>
+        <item>すべて除外</item>
+    </string-array>
+    <string-array name="set_spinner_space">
+        <item>設定しない</item>
+        <item>半角揃え</item>
+        <item>全角揃え</item>
+        <item>指定の文字に変換</item>
+        <item>すべて除外</item>
+    </string-array>
+
+
+    <!-- WordList [list] -->
+    <string name="list_tv_input">検索ワード：</string>
+    <string name="list_tv_output">変換ワード：</string>
+
+
+    <!-- AllDialog [dialog] -->
+    <string name="dialog_btn_positive">決定</string>
+    <string name="dialog_btn_neutral">キャンセル</string>
+
+    <!-- AddEditWordDialogFragment [aewdf] -->
+    <string name="aewdf_title_add_mode">キーワードの追加</string>
+    <string name="aewdf_title_edit_mode">キーワードの編集</string>
+    <string name="aewdf_keyword_title">【検索キーワード】</string>
+    <string name="aewdf_keyword_desc">変換または除外したい文字列をここに入力</string>
+    <string name="aewdf_et_hint_under_20">※20字以内</string>
+    <string name="aewdf_sw_removeorchange_off">●別ワードに変換</string>
+    <string name="aewdf_sw_removeorchange_on">●除外する</string>
+    <string name="aewdf_sw_removeorchange_desc_off">指定されたキーワードを、別の文字列へ変換します。</string>
+    <string name="aewdf_sw_removeorchange_desc_on">指定されたキーワードを、すべて除外します</string>
+    <string name="aewdf_sw_afternewline_off">●キーワード後に改行(OFF)</string>
+    <string name="aewdf_sw_afternewline_on">●キーワード後に改行(ON)</string>
+    <string name="aewdf_sw_afternewline_desc_off">改行を行いません。\n</string>
+    <string name="aewdf_sw_afternewline_desc_on">指定されたキーワードを「変換」または「除外」した後、\n改行します。</string>
+
+
+    <!-- ConfirmDialogFragment [cdf] -->
+    <string name="cdf_message_last_word">よろしいですか？</string>
+    <string name="cdf_main_title_clear">クリアの確認</string>
+    <string name="cdf_main_message_clear">入力・出力内容をクリアします。</string>
+    <string name="cdf_set_title_reset">リセットの確認</string>
+    <string name="cdf_set_message_reset">登録されたキーワードを全て削除します。</string>
+    <string name="cdf_set_title_delete">キーワードの削除</string>
+    <string name="cdf_set_message_delete">このキーワードを削除します。</string>
+
+
+    <!-- HowToUseActivity [htua] -->
+    <string name="htua_title_opening">このアプリの使い方</string>
+    <string name="htua_title_button">各ボタンの説明</string>
+    <string name="htua_title_nlsset">改行・空白の設定について</string>
+    <string name="htua_title_priority">優先度って何？</string>
+    <string name="htua_desc">スワイプで移動</string>
+
+
+    <!-- Toast  [toast]-->
+    <string name="toast_main_copy">クリップボードにコピーしました。</string>
+    <string name="toast_main_save">設定を保存しました。</string>
+    <string name="toast_set_emptyinput">検索ワードは必ず入力してください。</string>
+    <string name="toast_set_emptyoutput">変換後の文字列を入力するか、除外設定にしてください。</string>
+    <string name="toast_set_alreadyexists">その検索ワードは既に登録されています。</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

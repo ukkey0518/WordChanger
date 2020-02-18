@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_addWordDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_l">
+
+    <TextView
+        style="@style/titleStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/aewdf_keyword_title" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/aewdf_keyword_desc"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_m" />
+
+
+    <EditText
+        android:id="@+id/addDialog_etInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="@string/aewdf_et_hint_under_20"
+        android:textColor="@color/blue"
+        android:inputType="text"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:padding="@dimen/dp_m"
+        android:scrollbars="vertical"
+        android:textSize="@dimen/sp_m" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="@dimen/dp_m"
+        android:layout_marginTop="@dimen/dp_l"
+        android:layout_marginEnd="@dimen/dp_m"
+        android:gravity="center"
+        app:srcCompat="@drawable/iv_aewdf_arrow" />
+
+    <Switch
+        android:id="@+id/swRemoveOrChange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_m"
+        android:checked="false"
+        android:fontFamily="@font/corporatelogo"
+        android:gravity="start"
+        android:text="@string/aewdf_sw_removeorchange_off"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="@dimen/sp_m" />
+
+    <TextView
+        android:id="@+id/tvRemoveOrChangeDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/aewdf_sw_removeorchange_desc_off"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_s" />
+
+    <EditText
+        android:id="@+id/addDialog_etOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_m"
+        android:background="@color/white"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/red"
+        android:hint="@string/aewdf_et_hint_under_20"
+        android:inputType="text"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:padding="@dimen/dp_m"
+        android:scrollbars="vertical"
+        android:textSize="@dimen/sp_m" />
+
+    <Switch
+        android:id="@+id/swAfterNewLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_l"
+        android:checked="false"
+        android:fontFamily="@font/corporatelogo"
+        android:gravity="start"
+        android:text="@string/aewdf_sw_afternewline_off"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="@dimen/sp_m" />
+
+    <TextView
+        android:id="@+id/tvAfterNewLineDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_l"
+        android:text="@string/aewdf_sw_afternewline_desc_off"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_s" />
+
+</LinearLayout>
