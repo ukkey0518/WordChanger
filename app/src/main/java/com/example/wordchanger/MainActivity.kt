@@ -53,13 +53,10 @@ class MainActivity : AppCompatActivity(), ConfirmDialogFragment.ConfirmDialogLis
         adView.loadAd(AdRequest.Builder().build())
 
 
-        // [入力クリアボタン]　TextWatcher生成
+        // [入力クリアボタン]　tvInputに 文字がある時クリアボタン有効　<->　未入力の時無効
         _textWatcher = object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                // "入力クリアボタン無効化中" に "入力欄に文字が入力されたとき" 、入力クリアボタンを表示させる
-                if (!(main_btnClearInput.isEnabled) && s.toString().isNotEmpty()) {
-                    main_btnClearInput.isEnabled = true
-                }
+                main_btnClearInput.isEnabled = !(main_btnClearInput.isEnabled) && s.toString().isNotEmpty()
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -81,7 +78,7 @@ class MainActivity : AppCompatActivity(), ConfirmDialogFragment.ConfirmDialogLis
         _app.wordList = _changer.saveDataToList(saveData)
 
 
-//　初回起動時の処理
+        //　初回起動時の処理
         if (_prefFirstBoot.getBoolean("flag", true)) {
 
         val dialog = OpeningDialogFragment()
