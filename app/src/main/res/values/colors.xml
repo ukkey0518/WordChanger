@@ -10,5 +10,9 @@
     <color name="gray">#999999</color>
     <color name="gradStart">#FF4F02</color>
     <color name="black">#000000</color>
+    <color name="silver">#c0c0c0</color>
+    <color name="gold">#ffd700</color>
+    <color name="silver_pressed">#989898</color>
+    <color name="gold_pressed">#d7a500</color>
     <color name="gradEnd">#FFDBC9</color>
 </resources>

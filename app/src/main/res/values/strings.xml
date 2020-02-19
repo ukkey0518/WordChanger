@@ -9,6 +9,8 @@
     <string name="main_output_hint">変換後の文字列</string>
     <string name="main_input_title">テキスト入力</string>
     <string name="main_output_title">テキスト出力</string>
+    <string name="main_btn_setting">変換の設定</string>
+    <string name="main_btn_change">変換</string>
 
 
     <!-- SettingActivity [set] -->

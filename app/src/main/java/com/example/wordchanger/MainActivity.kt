@@ -97,34 +97,6 @@ class MainActivity : AppCompatActivity(), ConfirmDialogFragment.ConfirmDialogLis
         // [入力欄の監視] TextWatcherの登録
         main_etInput.addTextChangedListener(_textWatcher)
 
-
-        // [設定ボタン] タッチリスナーの登録
-        main_btnSetting.setOnTouchListener { _, event ->
-            when (event.action) {
-                MotionEvent.ACTION_DOWN -> {
-                    main_btnSetting.setImageResource(R.drawable.btn_main_setting_push)
-                }
-                MotionEvent.ACTION_UP -> {
-                    main_btnSetting.setImageResource(R.drawable.btn_main_setting)
-                }
-            }
-            false
-        }
-
-
-        // [変換ボタン] タッチリスナーの登録
-        main_btnChange.setOnTouchListener { _, event ->
-            when (event.action) {
-                MotionEvent.ACTION_DOWN -> {
-                    main_btnChange.setImageResource(R.drawable.btn_main_change_push)
-                }
-                MotionEvent.ACTION_UP -> {
-                    main_btnChange.setImageResource(R.drawable.btn_main_change)
-                }
-            }
-            false
-        }
-
     }
 
 

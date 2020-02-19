@@ -93,13 +93,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layout_Top" />
 
-    <ImageView
+    <Button
         android:id="@+id/main_btnSetting"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_marginStart="@dimen/dp_m"
         android:onClick="onSettingButtonClick"
-        android:src="@drawable/btn_main_setting"
+        android:text="@string/main_btn_setting"
+        android:fontFamily="@font/corporatelogo"
+        android:textSize="@dimen/sp_l"
+        android:background="@drawable/state_btn_main_setting"
         app:layout_constraintBottom_toTopOf="@id/adView"
         app:layout_constraintEnd_toStartOf="@id/main_arrow"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,13 +118,17 @@
         app:layout_constraintStart_toEndOf="@id/main_btnSetting"
         app:layout_constraintTop_toBottomOf="@id/main_etInput" />
 
-    <ImageView
+    <Button
         android:id="@+id/main_btnChange"
         android:layout_width="175dp"
         android:layout_height="70dp"
         android:layout_marginEnd="@dimen/dp_m"
         android:onClick="onChangeButtonClick"
-        android:src="@drawable/btn_main_change"
+        android:text="@string/main_btn_change"
+        android:textSize="@dimen/sp_ll"
+        android:textColor="@color/red"
+        android:fontFamily="@font/corporatelogo"
+        android:background="@drawable/state_btn_main_change"
         app:layout_constraintBottom_toTopOf="@id/adView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/main_arrow"
