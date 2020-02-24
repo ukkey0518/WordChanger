@@ -7,7 +7,6 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.Menu
 import android.view.MenuItem
-import android.view.MotionEvent
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -32,7 +31,6 @@ class MainActivity : AppCompatActivity(), ConfirmDialogFragment.ConfirmDialogLis
     private lateinit var _textWatcher: TextWatcher
 
     private lateinit var _prefSaveData: SharedPreferences
-    private lateinit var _prefFirstBoot: SharedPreferences
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,8 +42,7 @@ class MainActivity : AppCompatActivity(), ConfirmDialogFragment.ConfirmDialogLis
         _app = application as MainApplication
         _changer = ListSaveDataChanger()
 
-        _prefSaveData = getSharedPreferences("tanukiSaveData", Context.MODE_PRIVATE)
-        _prefFirstBoot = getSharedPreferences("tanukiFirstBoot", Context.MODE_PRIVATE)
+        _prefSaveData = getSharedPreferences("WCSaveData", Context.MODE_PRIVATE)
 
 
         // 広告のロード
@@ -79,12 +76,12 @@ class MainActivity : AppCompatActivity(), ConfirmDialogFragment.ConfirmDialogLis
 
 
         //　初回起動時の処理
-        if (_prefFirstBoot.getBoolean("flag", true)) {
+        if (_prefSaveData.getBoolean("firstBootFlag", true)) {
 
         val dialog = OpeningDialogFragment()
         dialog.show(supportFragmentManager, "OpeningDialogFragment")
 
-            _prefFirstBoot.edit().putBoolean("flag", false).apply()
+            _prefSaveData.edit().putBoolean("firstBootFlag", false).apply()
         }
 
 
