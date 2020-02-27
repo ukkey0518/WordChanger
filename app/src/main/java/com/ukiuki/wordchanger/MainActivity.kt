@@ -1,4 +1,4 @@
-package com.example.wordchanger
+package com.ukiuki.wordchanger
 
 import android.content.*
 import android.graphics.Color

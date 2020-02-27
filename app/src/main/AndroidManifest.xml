@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.wordchanger">
+    package="com.ukiuki.wordchanger">
 
     <application
-        android:name=".MainApplication"
+        android:name="com.ukiuki.wordchanger.MainApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity"
+        <activity android:name="com.ukiuki.wordchanger.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,11 +25,11 @@
         <
         -->
         <activity
-            android:name=".MainActivity"
+            android:name="com.ukiuki.wordchanger.MainActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".HowToUseActivity"
+            android:name="com.ukiuki.wordchanger.HowToUseActivity"
             android:theme="@style/Theme.HowToUseBackground" />
 
         <!--
@@ -40,14 +40,15 @@
         <
         -->
         <activity
-            android:name=".SettingActivity"
+            android:name="com.ukiuki.wordchanger.SettingActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan"
             /> <!-- バナー広告の設定 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713" />
-        <!-- ca-app-pub-1318447390913519~9483044448 -->
+            android:value="ca-app-pub-1318447390913519~9483044448" />
+        <!-- TEST : ca-app-pub-3940256099942544~3347511713 -->
+        <!-- 本番 : ca-app-pub-1318447390913519~9483044448 -->
     </application>
 
 </manifest>

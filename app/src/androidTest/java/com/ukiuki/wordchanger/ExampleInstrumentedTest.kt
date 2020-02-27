@@ -1,4 +1,4 @@
-package com.example.wordchanger
+package com.ukiuki.wordchanger
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

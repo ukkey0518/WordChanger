@@ -1,4 +1,4 @@
-package com.example.wordchanger
+package com.ukiuki.wordchanger
 
 import androidx.appcompat.app.AlertDialog
 import android.app.Dialog
@@ -39,6 +39,7 @@ class AddEditWordDialogFragment private constructor(): DialogFragment(), DialogI
     private lateinit var etInput: EditText
     private lateinit var etOutput: EditText
     private lateinit var swRemoveOrChange: Switch
+
     private lateinit var swAfterNewLine: Switch
     private lateinit var tvRemoveOrChangeDesc: TextView
     private lateinit var tvAfterNewLineDesc: TextView
